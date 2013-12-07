@@ -44,7 +44,7 @@ int Serialf::printf(const char *format, ...) {
   fdev_set_udata(&f, this);
   va_start(ap, format);
   return vfprintf(&f, format, ap);
-}
+};
 
 
 int Serialf::printf(const __FlashStringHelper *format, ...) {
@@ -55,6 +55,6 @@ int Serialf::printf(const __FlashStringHelper *format, ...) {
   fdev_set_udata(&f, this);
   va_start(ap, format);
   return vfprintf_P(&f, (const char *)format, ap);
-}
+};
 
 #endif
